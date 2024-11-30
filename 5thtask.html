@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #textArea {
+            width: 50%;
+            height: 100px;
+            font-family: Arial;
+            font-size: 10pt;
+        }
+    </style>
+
+</head>
+<body>
+
+<div>
+    <button id="btn1" >button 1</button>
+    <button id="btn2" >button 2</button>
+    <button id="btn3" >button 3</button>
+</div>
+
+<div>
+    <label for="countris">Choose a country: </label>
+    <select name="country" id="countris">
+        <option value="palastine">Palastine</option>
+        <option value="india">India</option>
+        <option value="leybia">leybia</option>
+        <option value="egypt">Egypt</option>
+        <option value="jordan">Jordan</option>
+    </select>
+    <div>
+        <img id="flag" src="palestine.webp" alt="Country Flag" style="width: 300px;">
+    </div>
+</div>
+
+
+ <div>
+        <select id="fontType">
+            <option value="Arial">Arial</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+        </select>
+
+        <select id="fontSize">
+            <option value="10pt">10pt</option>
+            <option value="12pt">12pt</option>
+            <option value="14pt">14pt</option>
+            <option value="16pt">16pt</option>
+        </select>
+
+        <label>
+            <input type="checkbox" id="italic"> Italic
+        </label>
+        <label>
+            <input type="checkbox" id="bold"> Bold
+        </label>
+        <label>
+            <input type="checkbox" id="underline"> Underline
+        </label>
+    </div>
+
+    <textarea id="textArea">Hi I am Farah!</textarea>
+
+<script>
+
+/*Q1: An arrow function expression is a compact alternative to a traditional function expression, with some semantic differences and deliberate limitations in usage.
+An arrow function is essentially an anonymous function with a shorter syntax. They are often assigned to variables, making them reusable. Arrow functions are also known as lambda functions in some other programming languages.*/
+
+//note:Note: This works only if the function has only one statement.
+
+/*Q2: What is the main difference ://Arrow Function without Parameters// Traditional Function:
+More suitable when you need a dynamic this, such as in object methods.
+Arrow Function:
+Best for short, non-method functions, or when you want to maintain the this value from the surrounding context (like in callbacks)
+. Syntax:
+. this Keyword Binding
+. arguments Object
+. Usage as Constructors
+. Implicit return
+*/
+
+
+// excersise 1 : 
+const red = document.getElementById("btn1");
+const green = document.getElementById("btn2");
+const purple = document.getElementById("btn3");
+
+
+red.addEventListener(
+    "click", 
+    () =>{
+        document.querySelector("body").style.backgroundColor="red"
+    }
+);
+
+green.addEventListener(
+    "click",
+    ()=>{
+        document.querySelector("body").style.backgroundColor="green"
+    }
+);
+
+purple.addEventListener(
+    "click",
+    ()=>{
+        document.querySelector("body").style.backgroundColor="purple"
+    }
+);
+
+
+// excersise 2 : 
+
+const dropDown = document.getElementById("countris");
+dropDown.addEventListener(
+    "change",
+    (event) => {
+        switch (event.target.value) {
+            case 'palastine':
+                document.getElementById("flag").src = "palestine.webp"
+                break;
+            case 'india':
+                document.getElementById("flag").src = "india.png"
+                break;
+            case 'leybia':
+                document.getElementById("flag").src = "leybia.jfif"
+                break;
+            case 'egypt':
+                document.getElementById("flag").src = "egypt.jfif"
+                break;
+            case 'jordan':
+                document.getElementById("flag").src = "jordan.jfif"
+                break;
+
+            default:
+                break;
+        }
+    }
+);
+
+const textArea = document.getElementById('textArea');
+        const fontType = document.getElementById('fontType');
+        const fontSize = document.getElementById('fontSize');
+        const italic = document.getElementById('italic');
+        const bold = document.getElementById('bold');
+        const underline = document.getElementById('underline');
+
+        fontType.addEventListener('change', () => textArea.style.fontFamily = fontType.value);
+        fontSize.addEventListener('change', () => textArea.style.fontSize = fontSize.value);
+        italic.addEventListener('change', () => {
+     if (italic.checked) {
+                textArea.style.fontStyle = 'italic';
+            } else {
+                textArea.style.fontStyle = 'normal';
+            }
+        });
+        bold.addEventListener('change', () => {
+    if (bold.checked) {
+                textArea.style.fontWeight = 'bold';
+            } else {
+                textArea.style.fontWeight = 'normal';
+            }
+        });
+        underline.addEventListener('change', () => {
+     if (underline.checked) {
+                textArea.style.textDecoration = 'underline';
+            } else {
+                textArea.style.textDecoration = 'none';
+            }
+        });
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

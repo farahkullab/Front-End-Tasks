@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<head>
+  <title> my website</title>
+  
+   <style>
+.header1{
+   background-color: rgb(60, 204, 60); padding: 2ch;
+   display: flex;
+   justify-content: center; 
+   align-items: center;
+}
+
+
+.profile-img {
+    width: 200px; 
+    height: 200px; 
+    border-radius: 50%;
+    border: 5px solid #c71e1e;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, filter 0.3s ease; 
+}
+
+.profile-img:hover {
+    transform: scale(1.05);
+    filter: grayscale(100%);
+}
+
+
+ 
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #0aafe2;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+
+.video-container {
+  position: relative;
+  width: 300px; /* Width of video */
+  height: 50px; /* Height of video */
+}
+
+ 
+form{
+  border: #6c797d solid 2px;
+  width: 50%;
+  padding: 25px;
+  background-color: #6c797d;
+  border-radius: 10px;
+  margin-bottom: 70px;
+}
+
+
+
+input{
+  width: 200px;
+  height: 30px;
+  margin: 100ox; 
+  cursor: pointer;
+  
+
+}
+
+a {
+  display: block;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+a:hover{
+  transform: scale(1.2);
+
+}
+.div5 {
+  width: 100px;
+  height: 200px;
+  position: fixed;
+  right: 0;
+  top: 100px;
+  padding: 20px;
+  border-radius: 5%;
+}
+
+
+footer{
+  position: fixed;
+  bottom: 0;
+  background-color:  #73AD21;
+  width: 100%;
+  text-align: center;
+}
+
+header{
+  background-color: #73AD21;
+  height: 50px ;
+  color: antiquewhite;
+  position: sticky;
+  top: 0;
+  text-align: center;
+  padding-top: 30px;
+  border-radius: 20px;
+  font-size: larger
+}
+
+
+  </style>
+  
+  </head>
+
+ <body>
+
+  <header>welcome to my personal website </header>
+
+
+
+    <div>
+    <h2>Introduction</h2>
+    
+         <p> farah kullab </p><p>25 years old</p>
+         <p>my major medical laboratory graduated at 2021 very good</p>
+     </div>
+     
+     <picture>
+     <source media="(min-width:650px)" srcset="profile.jpg.jfif">
+     <source media="(min-width:465px)" srcset="profile.jpg.jfif">
+     </picture>
+     <img src="./profile.jpg" alt="profile" class="profile-img">
+
+     <h2>About me</h2>
+         <p>I`m passionate and dedicated individual with a strong interest in technology and innovatio, now im a treniee of RPA at Artikys company </p>
+
+  
+ <table id="customers" >
+       
+            <tr style="background-color: #73AD21;">
+              <td><b>course\experince name</b></td>
+              <td><b>instituation</b></td>
+              <td><b>year</b></td>
+            </tr>
+            
+            <tr>
+              <td>RPA</td>
+              <td>ghgjhbj</td>
+              <td>2018</td>
+            </tr>
+          <tr>
+              <td>Aug-until now</td>
+              <td>bjhhjhbj</td>
+              <td>2009</td>
+          </tr>
+    
+ </table>
+
+    <h3>My skills:</h3>
+
+    <ul>
+         <li>computer skills</li>
+         <li>team work</li>
+         <li>volunteering</li>
+         <li>leadership</li>
+        </ul>
+        
+   
+          <iframe width="200" height="200" 
+          src="https://www.youtube.com/embed/Ide-3gIEPD8?si=IKa7Sf2VPocz0cDP" 
+          title="YouTube video player" frameborder="0" allow="accelerometer;
+           autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+           referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <video controls width="150px" class="vedio-container">
+            <source src="./VID-20230405-WA0103.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+           </video>
+
+     <h3> Contact me :</h3>
+
+
+     <form action="https://artikeys.com/" class="" >
+        <label for="name">Name:</label><br>
+        <input required type="text" id="fname" name="your name" placeholder="your name" ><br>
+        <label
+         for="email">Email:</label><br>
+        <input required type="text" id="email" name="email" placeholder="Email" ><br><br>
+        <label for="country">Email:</label><br>
+        <input required type="text" id="country" name="country" placeholder="your country"><br><br>
+        <input type="submit" value="Submit">
+      </form> 
+
+
+
+     <div class="div5" style="background-color: #73AD21;" >
+        <a href="https://www.facebook.com">Facebook</a>
+        <a href="https://www.Linkedin.com">Linkedin</a>
+        <a href="https://www.Instagram.com">Instagram</a>
+        <a href="https://www.slack.com">slack</a>
+     </div>
+
+     <footer>
+      <p>Footer</p>
+    </footer>
+    
+
+</body>
+</html>
